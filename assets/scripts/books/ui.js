@@ -53,6 +53,17 @@ const signOutFailure = function () {
   $('#message').text('Error on sign out')
 }
 
+const createNoteSuccess = function () {
+  // console.log('Signed out successfully')
+  $('#message').text('Note Sent')
+  // $('.headers').hide()
+}
+
+const createNoteFailure = function () {
+  // console.error(error)
+  $('#message').text('Note Send Failure')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -61,5 +72,7 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  createNoteSuccess,
+  createNoteFailure
 }

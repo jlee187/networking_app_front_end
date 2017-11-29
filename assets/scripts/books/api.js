@@ -43,9 +43,44 @@ const signOut = function (data) {
   })
 }
 
+const createNote = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/people/',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
+// const post = function (game) {
+//   let data = {
+//     game: {
+//       cell: {
+//         index: store.game.cells.index,
+//         value: store.game.cells.value
+//       },
+//       over: store.game.over
+//     }
+//   }
+//   data = JSON.stringify(data)
+//   return $.ajax({
+//     url: config.apiOrigin + '/people/' /* + store.game.id */,
+//     method: 'PATCH',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     },
+//     contentType: 'application/json',
+//     data
+//   })
+// }
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
+  signOut,
+  createNote
+  // post
 }

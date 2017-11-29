@@ -44,11 +44,21 @@ const onSignOut = function (event) {
     .catch(ui.signOutFailure)
 }
 
+const onCreateNote = function (event) {
+  const data = getFormFields(this)
+  console.log(data)
+  event.preventDefault()
+  api.createNote(data)
+    .then(ui.CreateNoteSuccess)
+    .catch(ui.createNoteFailure)
+}
+
 const addHandlers = function () {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
+  $('#create-note').on('submit', onCreateNote)
 }
 
 module.exports = {
