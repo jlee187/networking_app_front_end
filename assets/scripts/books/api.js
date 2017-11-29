@@ -9,7 +9,6 @@ const signUp = function (data) {
     url: config.apiOrigin + '/sign-up',
     method: 'POST',
     data
-    // shortcut for data: data
   })
 }
 
@@ -43,27 +42,6 @@ const signOut = function (data) {
     }
   })
 }
-//
-// const createGame = function (data) {
-//   return $.ajax({
-//     url: config.apiOrigin + '/games',
-//     method: 'POST',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     },
-//     data
-//   })
-// }
-//
-// const showGame = function () {
-//   return $.ajax({
-//     url: config.apiOrigin + '/games',
-//     method: 'GET',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
 
 module.exports = {
   signUp,
