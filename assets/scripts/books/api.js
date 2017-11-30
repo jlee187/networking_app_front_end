@@ -75,6 +75,16 @@ const deleteNote = function (data) {
   })
 }
 
+const getPeople = function () {
+  return $.ajax({
+    url: config.apiOrigin + '/people',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 // const showNote = function () {
 //   return $.ajax({
 //     url: config.apiOrigin + '/people',
@@ -92,6 +102,7 @@ module.exports = {
   signOut,
   createNote,
   updateNote,
-  deleteNote
+  deleteNote,
+  getPeople
   // showNote
 }

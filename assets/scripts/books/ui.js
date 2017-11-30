@@ -6,6 +6,7 @@
 // $('#sign-out').hide()
 
 const store = require('../store')
+const showPeopleTemplate = require('../templates/helpers/person-listing.handlebars')
 
 const signUpSuccess = function (data) {
   // console.log(data)
@@ -86,6 +87,20 @@ const deleteNoteFailure = function () {
   $('#message').text('Note Delete Failure')
 }
 
+const getPeopleSuccess = (data) => {
+  console.log(data)
+  const showPeopleHtml = showPeopleTemplate({ people: data.people })
+  $('.content').append(showPeopleHtml)
+}
+
+const clearPeople = () => {
+  $('.content').empty()
+}
+
+const failure = (error) => {
+  console.error(error)
+}
+
 // const showNoteSuccess = function () {
 //   // console.log('Signed out successfully')
 //   $('#message').text('Note Shown Successfully')
@@ -111,7 +126,10 @@ module.exports = {
   updateNoteSuccess,
   updateNoteFailure,
   deleteNoteSuccess,
-  deleteNoteFailure // ,
+  deleteNoteFailure,
+  getPeopleSuccess,
+  clearPeople,
+  failure
   // showNoteSuccess,
   // showNoteFailure
 }

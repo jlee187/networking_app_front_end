@@ -86,6 +86,18 @@ const onDeleteNote = function (event) {
   return false
 }
 
+const onGetPeople = (event) => {
+  event.preventDefault()
+  api.getPeople()
+    .then(ui.getPeopleSuccess)
+    .catch(ui.failure)
+}
+
+const onClearPeople = (event) => {
+  event.preventDefault()
+  ui.clearPeople()
+}
+
 // const onShowNote = function (event) {
 //   const data = getFormFields(this)
 //   console.log(data)
@@ -103,6 +115,8 @@ const addHandlers = function () {
   $('#create-note').on('submit', onCreateNote)
   $('#update-note').on('submit', onUpdateNote)
   $('#delete-note').on('submit', onDeleteNote)
+  $('#getPeopleButton').on('click', onGetPeople)
+  $('#clearPeopleButton').on('click', onClearPeople)
   // $('#show-note').on('submit', onShowNote)
 }
 
