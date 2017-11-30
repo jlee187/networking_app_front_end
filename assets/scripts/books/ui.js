@@ -64,6 +64,39 @@ const createNoteFailure = function () {
   $('#message').text('Note Send Failure')
 }
 
+const updateNoteSuccess = function () {
+  // console.log('Signed out successfully')
+  $('#message').text('Note Updated')
+  // $('.headers').hide()
+}
+
+const updateNoteFailure = function () {
+  // console.error(error)
+  $('#message').text('Note Update Failure')
+}
+
+const deleteNoteSuccess = function () {
+  // console.log('Signed out successfully')
+  $('#message').text('Note Deleted')
+  // $('.headers').hide()
+}
+
+const deleteNoteFailure = function () {
+  // console.error(error)
+  $('#message').text('Note Delete Failure')
+}
+
+// const showNoteSuccess = function () {
+//   // console.log('Signed out successfully')
+//   $('#message').text('Note Shown Successfully')
+//   // $('.headers').hide()
+// }
+//
+// const showNoteFailure = function () {
+//   // console.error(error)
+//   $('#message').text('Note Shown Failure')
+// }
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -74,5 +107,11 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   createNoteSuccess,
-  createNoteFailure
+  createNoteFailure,
+  updateNoteSuccess,
+  updateNoteFailure,
+  deleteNoteSuccess,
+  deleteNoteFailure // ,
+  // showNoteSuccess,
+  // showNoteFailure
 }

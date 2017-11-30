@@ -12,6 +12,8 @@ const onSignUp = function (event) {
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
+  this.reset()
+  return false
 }
 
 const onSignIn = function (event) {
@@ -21,6 +23,8 @@ const onSignIn = function (event) {
   api.signIn(data)
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)
+  this.reset()
+  return false
 }
 
 const onChangePassword = function (event) {
@@ -30,6 +34,8 @@ const onChangePassword = function (event) {
   api.changePassword(data)
     .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFailure)
+  this.reset()
+  return false
 }
 
 const onSignOut = function (event) {
@@ -42,16 +48,52 @@ const onSignOut = function (event) {
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
+  this.reset()
+  return false
 }
 
 const onCreateNote = function (event) {
   const data = getFormFields(this)
   console.log(data)
+  console.log(data.person.id)
   event.preventDefault()
   api.createNote(data)
-    .then(ui.CreateNoteSuccess)
+    .then(ui.createNoteSuccess)
     .catch(ui.createNoteFailure)
+  this.reset()
+  return false
 }
+
+const onUpdateNote = function (event) {
+  const data = getFormFields(this)
+  console.log(data)
+  event.preventDefault()
+  api.updateNote(data)
+    .then(ui.updateNoteSuccess)
+    .catch(ui.updateNoteFailure)
+  this.reset()
+  return false
+}
+
+const onDeleteNote = function (event) {
+  const data = getFormFields(this)
+  console.log(data)
+  event.preventDefault()
+  api.deleteNote(data)
+    .then(ui.deleteNoteSuccess)
+    .catch(ui.deleteNoteFailure)
+  this.reset()
+  return false
+}
+
+// const onShowNote = function (event) {
+//   const data = getFormFields(this)
+//   console.log(data)
+//   event.preventDefault()
+//   api.createNote(data)
+//     .then(ui.createNoteSuccess)
+//     .catch(ui.createNoteFailure)
+// }
 
 const addHandlers = function () {
   $('#sign-up').on('submit', onSignUp)
@@ -59,6 +101,9 @@ const addHandlers = function () {
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
   $('#create-note').on('submit', onCreateNote)
+  $('#update-note').on('submit', onUpdateNote)
+  $('#delete-note').on('submit', onDeleteNote)
+  // $('#show-note').on('submit', onShowNote)
 }
 
 module.exports = {

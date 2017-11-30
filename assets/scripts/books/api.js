@@ -54,25 +54,34 @@ const createNote = function (data) {
   })
 }
 
-// const post = function (game) {
-//   let data = {
-//     game: {
-//       cell: {
-//         index: store.game.cells.index,
-//         value: store.game.cells.value
-//       },
-//       over: store.game.over
-//     }
-//   }
-//   data = JSON.stringify(data)
+const updateNote = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/people/' + data.person.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
+const deleteNote = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/people/' + data.person.id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
+// const showNote = function () {
 //   return $.ajax({
-//     url: config.apiOrigin + '/people/' /* + store.game.id */,
-//     method: 'PATCH',
+//     url: config.apiOrigin + '/people',
+//     method: 'GET',
 //     headers: {
 //       Authorization: 'Token token=' + store.user.token
-//     },
-//     contentType: 'application/json',
-//     data
+//     }
 //   })
 // }
 
@@ -81,6 +90,8 @@ module.exports = {
   signIn,
   changePassword,
   signOut,
-  createNote
-  // post
+  createNote,
+  updateNote,
+  deleteNote
+  // showNote
 }

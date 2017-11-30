@@ -62,6 +62,26 @@
         </fieldset>
       </form>
 
+      <form id="update-note">
+        <fieldset>
+          <legend>Update</legend>
+          <input type="text" name="person[name]" placeholder="Name">
+          <input type="text" name="person[connections]" placeholder="Connections">
+          <input type="text" name="person[partner]" placeholder="Partner">
+          <input type="text" name="person[children]" placeholder="Children">
+          <input type="text" name="person[notes]" placeholder="Notes">
+          <input type="text" name="person[id]" placeholder="ID">
+          <input type="submit" name="submit" value="Submit">
+        </fieldset>
+      </form>
+
+      <form id="delete-note">
+        <fieldset>
+          <legend>Delete Note</legend>
+          <input type="text" name="person[id]" placeholder="ID">
+          <input type="submit" name="submit" value="Submit">
+        </fieldset>
+      </form>
 
     </body>
 </html>
