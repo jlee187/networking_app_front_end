@@ -15,7 +15,7 @@
 
     <div class="user-auth">
       <!-- sign-up -->
-      <div class="btn-group">
+      <div class="btn-group" id="sign-up-button">
         <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Sign Up
         </button>
@@ -31,7 +31,7 @@
             </div>
             <div class="form-group">
               <label for="sign-up-password-confirmation">Password Confirmation</label>
-              <input type="text" class="form-control" id="sign-up-password-confirmation" name="credentials[password_confirmation]" placeholder="Password_Confirmation">
+              <input type="password" class="form-control" id="sign-up-password-confirmation" name="credentials[password_confirmation]" placeholder="Password_Confirmation">
             </div>
             <input type="submit" name="submit" value="Sign up">
           </form>
@@ -40,7 +40,7 @@
       </div>
 
 <!-- Sign-In -->
-<div class="btn-group">
+<div class="btn-group" id="sign-in-button">
         <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Sign In
         </button>
@@ -67,11 +67,11 @@
         <div class="dropdown-menu">
           <form class="px-4 py-3" id="change-password">
             <div class="form-group">
-              <label for="oldpw">Email address</label>
+              <label for="oldpw">Old Password</label>
               <input type="text" class="form-control" id="oldpw" name="passwords[old]" placeholder="Old Password">
             </div>
             <div class="form-group">
-              <label for="newpw">Password</label>
+              <label for="newpw">New Password</label>
               <input type="text" class="form-control" id="newpw" name="passwords[new]" placeholder="New Password">
             </div>
             <input type="submit" name="submit" value="Change Password">
@@ -137,9 +137,9 @@
     </div>
 </nav> -->
 
-    <div class="main">
+    <h3 id=message></h3>
 
-      <h3 id=message></h3>
+    <div class="main">
 
       <div id='selector'>
         <button id="composeNote" class="btn btn-default">Compose Note</button>
@@ -155,6 +155,7 @@
 
       <div id="type-id"></div>
 
+      <div id="notes">
       <form id="create-note">
         <fieldset>
           <!-- <legend>Info</legend> -->
@@ -163,7 +164,7 @@
           <input type="text" class="form-field" name="person[connections]" placeholder="Connections">
           <br>
           <input type="text" class="form-field" name="person[partner]" placeholder="Partner">
-          <br><br>
+          <br>
           <input type="text" class="form-field" name="person[children]" placeholder="Children">
           <br><br>
           <div class="add-name">Notes</div>
@@ -183,13 +184,15 @@
           <input type="text" class="form-field" name="person[connections]" placeholder="Connections">
           <br>
           <input type="text" class="form-field" name="person[partner]" placeholder="Partner">
-          <br><br>
+          <br>
           <input type="text" class="form-field" name="person[children]" placeholder="Children">
           <br><br>
-          <input type="text" class="form-field-note-box" name="person[notes]" placeholder="Notes">
+          <div class="add-name">Notes</div>
+          <input type="text" class="form-field-note-box" name="person[notes]">
           <br>
           <input type="text" class="form-field" name="person[id]" placeholder="ID">
           <br>
+          <div><img src='https://i.imgur.com/GaFHTNe.jpg' alt="NA"></div>
           <input type="submit" name="submit" value="Submit">
         </fieldset>
       </form>
@@ -201,6 +204,7 @@
           <input type="submit" name="submit" value="Submit">
         </fieldset>
       </form>
+    </div>
 
     </body>
 </html>

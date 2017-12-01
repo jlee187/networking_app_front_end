@@ -6,12 +6,13 @@
 // $('#sign-out').hide()
 
 const store = require('../store')
-const events = require('../events')
+// const events = require('../events')
 const showPeopleTemplate = require('../templates/helpers/person-listing.handlebars')
 
 const signUpSuccess = function (data) {
   // console.log(data)
   $('#message').text('Signed up succesfully')
+  $('#sign-up-button').hide()
 }
 
 const signUpFailure = function () {
@@ -24,6 +25,8 @@ const signInSuccess = function (data) {
   store.user = data.user
   $('#message').text('Signed in succesfully')
   $('.main').show()
+  $('#sign-up-button').hide()
+  $('#sign-in-button').hide()
   // $('.user-actions').hide()
   // $('#sign-up').hide()
   // $('#sign-in').hide()
@@ -51,6 +54,13 @@ const changePasswordFailure = function () {
 const signOutSuccess = function () {
   // console.log('Signed out successfully')
   $('#message').text('Signed out successfully')
+  $('#sign-up-button').show()
+  $('#sign-in-button').show()
+  $('.main').hide()
+  $('#notes').hide()
+  $('#message').hide()
+  $('#type-id').hide()
+  document.getElementById('onClearPeople').click()
   // $('.headers').hide()
 }
 
@@ -99,10 +109,12 @@ const getPeopleSuccess = (data) => {
   console.log(data)
   const showPeopleHtml = showPeopleTemplate({ people: data.people })
   $('.content').append(showPeopleHtml)
+  $('#message').html('Retrieved all notes')
 }
 
 const clearPeople = () => {
   $('.content').empty()
+  $('#message').html('All notes hidden')
 }
 
 const failure = (error) => {
