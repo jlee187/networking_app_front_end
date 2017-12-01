@@ -1,35 +1,78 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
+
 $black: #000;
 $gray: #dadada;
+$bgray: #dfdfdf;
 
-.btn-group {
-  float: left;
-  position: sticky;
+// #bottom {
+  // background-image: url('https://i.imgur.com/GaFHTNe.jpg');
+  // border: 0;
+  // padding-top: -5px;
+  // height: 75px;
+  // background-color: $black;
+// }
+
+// .bottom-email-2
+// .btn-group {
+//   float: left;
+//   position: sticky;
+// }
+
+// br {
+//   border: 2px solid $bgray;
+// }
+
+// #create-note {
+//   border: 2px solid $bgray;
+// }
+
+.form-field {
+  // border: 0;
+  min-width: 800px;
 }
 
-ul {
-  background-color: $gray;
-  border: 2px solid $black;
-  min-width: 1094px;
+.form-field-note-box {
+  min-height: 300px;
+  min-width: 800px;
+  padding-bottom: -5px;
 }
 
-.header {
-  clear: both;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 32px;
-  margin: 0;
-  min-width: 450px;
+header {
+  // clear: both;
+  // font-size: 12px;
+  // font-weight: 400;
+  // line-height: 32px;
+  // margin: auto;
+  // padding-left: 50%;
+  // padding-right: 50%;
+  // width: 50%;
+  // min-width: 450px;
 }
 
 .main {
   clear: both;
   display: block;
   float: left;
-  max-width: 100%;
+  min-width: 800px;
   overflow: auto;
+  padding: 20px;
+}
+
+#selector {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+#type-id {
+  font-size: 24px;
+}
+
+ul {
+  background-color: $gray;
+  border: 2px solid $black;
+  min-width: 800px;
 }
 
 // .user-actions {

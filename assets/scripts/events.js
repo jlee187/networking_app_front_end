@@ -100,31 +100,25 @@ const onClearPeople = (event) => {
 }
 
 const showCreate = () => {
+  $('#type-id').html('Create a new note')
   $('#create-note').show()
   $('#update-note').hide()
   $('#delete-note').hide()
 }
 
 const showEdit = () => {
+  $('#type-id').html('Edit a previous note')
   $('#update-note').show()
   $('#create-note').hide()
   $('#delete-note').hide()
 }
 
 const showDelete = () => {
+  $('#type-id').html('Delete a previous note')
   $('#delete-note').show()
   $('#create-note').hide()
   $('#update-note').hide()
 }
-
-// const onShowNote = function (event) {
-//   const data = getFormFields(this)
-//   console.log(data)
-//   event.preventDefault()
-//   api.createNote(data)
-//     .then(ui.createNoteSuccess)
-//     .catch(ui.createNoteFailure)
-// }
 
 const addHandlers = function () {
   $('#sign-up').on('submit', onSignUp)
