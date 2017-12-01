@@ -22,6 +22,10 @@ const signInSuccess = function (data) {
   // console.log(data)
   store.user = data.user
   $('#message').text('Signed in succesfully')
+  $('.main').show()
+  // $('.user-actions').hide()
+  // $('#sign-up').hide()
+  // $('#sign-in').hide()
   // $('#change-password').show()
   // $('#sign-out').show()
   // $('#sign-up').hide()

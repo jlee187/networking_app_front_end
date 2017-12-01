@@ -87,6 +87,7 @@ const onDeleteNote = function (event) {
 }
 
 const onGetPeople = (event) => {
+  ui.clearPeople()
   event.preventDefault()
   api.getPeople()
     .then(ui.getPeopleSuccess)
@@ -96,6 +97,24 @@ const onGetPeople = (event) => {
 const onClearPeople = (event) => {
   event.preventDefault()
   ui.clearPeople()
+}
+
+const showCreate = () => {
+  $('#create-note').show()
+  $('#update-note').hide()
+  $('#delete-note').hide()
+}
+
+const showEdit = () => {
+  $('#update-note').show()
+  $('#create-note').hide()
+  $('#delete-note').hide()
+}
+
+const showDelete = () => {
+  $('#delete-note').show()
+  $('#create-note').hide()
+  $('#update-note').hide()
 }
 
 // const onShowNote = function (event) {
@@ -117,7 +136,9 @@ const addHandlers = function () {
   $('#delete-note').on('submit', onDeleteNote)
   $('#getPeopleButton').on('click', onGetPeople)
   $('#clearPeopleButton').on('click', onClearPeople)
-  // $('#show-note').on('submit', onShowNote)
+  $('#composeNote').on('click', showCreate)
+  $('#editNote').on('click', showEdit)
+  $('#deleteNote').on('click', showDelete)
 }
 
 module.exports = {

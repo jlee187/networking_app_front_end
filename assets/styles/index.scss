@@ -1,2 +1,48 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+$black: #000;
+$gray: #dadada;
+
+.btn-group {
+  float: left;
+  position: sticky;
+}
+
+ul {
+  background-color: $gray;
+  border: 2px solid $black;
+  min-width: 1094px;
+}
+
+.header {
+  clear: both;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 0;
+  min-width: 450px;
+}
+
+.main {
+  clear: both;
+  display: block;
+  float: left;
+  max-width: 100%;
+  overflow: auto;
+}
+
+// .user-actions {
+//   border: 2px solid $black;
+//   border-radius: 5px;
+//   // clear: both;
+//   display: block;
+//   float: left;
+//   left: 0%;
+//   max-width: 40%;
+//   overflow: hidden;
+//   padding: 10px;
+//   // position: fixed;
+//   top: 0%;
+//   // transform: translate(-50%, -50%);
+// }

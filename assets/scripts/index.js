@@ -7,6 +7,10 @@ const events = require('./events')
 $(() => {
   setAPIOrigin(location, config)
   events.addHandlers()
+  $('.main').hide()
+  $('#create-note').hide()
+  $('#update-note').hide()
+  $('#delete-note').hide()
 })
 
 // use require with a reference to bundle the file and use it in this file
