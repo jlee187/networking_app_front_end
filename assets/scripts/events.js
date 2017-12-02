@@ -54,8 +54,8 @@ const onSignOut = function (event) {
 
 const onCreateNote = function (event) {
   const data = getFormFields(this)
-  console.log(data)
-  console.log(data.person.id)
+  // console.log(data)
+  // console.log(data.person.id)
   event.preventDefault()
   api.createNote(data)
     .then(ui.createNoteSuccess)
@@ -100,6 +100,7 @@ const onClearPeople = (event) => {
 }
 
 const showCreate = () => {
+  $('#type-id').show()
   $('#type-id').html('Create a new note')
   $('#create-note').show()
   $('#update-note').hide()
@@ -107,6 +108,7 @@ const showCreate = () => {
 }
 
 const showEdit = () => {
+  $('#type-id').show()
   $('#type-id').html('Edit a previous note')
   $('#update-note').show()
   $('#create-note').hide()
@@ -114,6 +116,7 @@ const showEdit = () => {
 }
 
 const showDelete = () => {
+  $('#type-id').show()
   $('#type-id').html('Delete a previous note')
   $('#delete-note').show()
   $('#create-note').hide()
@@ -124,7 +127,7 @@ const addHandlers = function () {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
-  $('#sign-out').on('submit', onSignOut)
+  $('#sign-out').on('click', onSignOut)
   $('#create-note').on('submit', onCreateNote)
   $('#update-note').on('submit', onUpdateNote)
   $('#delete-note').on('submit', onDeleteNote)

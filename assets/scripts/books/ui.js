@@ -27,11 +27,13 @@ const signInSuccess = function (data) {
   $('.main').show()
   $('#sign-up-button').hide()
   $('#sign-in-button').hide()
+  $('#notes').show()
+  // $('#type-id').show()
   // $('.user-actions').hide()
   // $('#sign-up').hide()
   // $('#sign-in').hide()
-  // $('#change-password').show()
-  // $('#sign-out').show()
+  $('#change-password-button').show()
+  $('#sign-out').show()
   // $('#sign-up').hide()
   // $('.headers').css('display', 'block')
 }
@@ -53,14 +55,18 @@ const changePasswordFailure = function () {
 
 const signOutSuccess = function () {
   // console.log('Signed out successfully')
+  $('#clearPeopleButton').click()
   $('#message').text('Signed out successfully')
   $('#sign-up-button').show()
   $('#sign-in-button').show()
   $('.main').hide()
   $('#notes').hide()
-  $('#message').hide()
+  // $('#message').hide()
   $('#type-id').hide()
-  document.getElementById('onClearPeople').click()
+  $('#change-password-button').hide()
+  $('#update-note').hide()
+  $('#create-note').hide()
+  $('#delete-note').hide()
   // $('.headers').hide()
 }
 
