@@ -32,7 +32,7 @@ const signInSuccess = function (data) {
   // $('.user-actions').hide()
   // $('#sign-up').hide()
   // $('#sign-in').hide()
-  $('#change-password-button').show()
+  $('#change-password').show()
   $('#sign-out').show()
   // $('#sign-up').hide()
   // $('.headers').css('display', 'block')

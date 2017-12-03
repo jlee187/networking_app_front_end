@@ -60,7 +60,7 @@
         </div>
 </div>
 <!-- Change Password -->
-  <div class="btn-group" id="change-password-button">
+  <!-- <div class="btn-group" id="change-password-button">
         <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Change Password
         </button>
@@ -78,7 +78,17 @@
           </form>
           <br>
         </div>
-      </div>
+      </div> -->
+
+  <form class="header" id="change-password">
+    <fieldset>
+      <legend>Change Password!</legend>
+      <input type="text" name="passwords[old]" placeholder="Old Password">
+      <input type="text" name="passwords[new]" placeholder="New Password">
+      <input type="submit" name="submit" value="Change Password!">
+    </fieldset>
+  </form>
+
   <!-- Sign Out -->
     <!-- <div class="btn-group">
           <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

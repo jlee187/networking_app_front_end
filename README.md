@@ -1,61 +1,41 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
+Purpose of the app: Doctors add notes to your patient history; apparel companies
+send you birthday discounts, all to create a stronger relationship in a shorter
+period of time. This app labeled "JMAIL" or gmail for a better Job aims to help
+you create a stronger network in a shorter period of time by allowing you to
+remember pertitent information about people you meet wherever you have internet access!
 
-# browser-template
+How it works: Simply sign up/ sign in/ change a password and sign out when you're done.
+While logged in compose a new note, edit a previous note, delete a previous note, get
+the full list of your notes, and hide the list when you're done with it.
 
-A template for starting front-end projects. Webpack for `require` system, build
-pipeline, and development server. Boostrap and Handlebars.js included. No
-front-end frameworks included.
+To generate this app, two repositories had to be created: 1) front end 2) back end/ API.
+The front end would leverage Javascript, CSS, HTML, and Jquery to register actions and send them
+to the API. Once the action is received by the API, Ruby on Rails interprets the action and passes
+the information to the database and routes it back to the client front end. The API leverages
+Ruby on Rails to perform these actions.
 
-## Installation
+Planning/ Development Process : First, I outlined the purpose of my app. While I spent
+more time outlining and planning my app, a stronger structure and necessary builds would expedite
+build time and increase clarity of code. From the purpose, wireframes and enterprise relationship
+diagrams were made soon after which outlined areas which may be more difficult to tackle and would
+garner additional working and testing time. Naturally, based on importance to achieve base goals and
+assumed time to completion, a planning schedule was created and tracked again.
 
-1.  [Download](../../archive/master.zip) this template.
-1.  Unzip and rename the template directory.
-1.  Empty [`README.md`](README.md) and fill with your own content.
-1.  Replace all instances of `ga-wdi-boston.browser-template` with the name of your project.
-1.  Move into the new project and `git init`
-1.  Add all of the files in your project with the command `git add -A`
-  -   *Note:* THIS IS THE ONLY TIME YOU SHOULD RUN THIS COMMAND
-1.  Commit all of your files with the command `git commit`
-  -   Your commit title should read `Initial commit`
-1.  Install dependencies with `npm install`.
+Problem-Solving Strategy: When issues were hit, my typical strategy was to first review the code for
+any clear typos or syntax errors. After this, I would reference google or previous notes I had taken on the
+issue at hand. If that failed, I would usually consult a classmate or professional for additional guidance.
 
-## Structure
+Wireframe: https://imgur.com/o2U6oZV
+ERD: https://imgur.com/TusWEgG
 
-Developers should store JavaScript files in [`assets/scripts`](assets/scripts).
-The "manifest" or entry-point is
-[`assets/scripts/index.js`](assets/scripts/index.js). In general, only
-application initialization goes in this file. It's normal for developers to
-start putting all code in this file, but encourage them to break out different
-responsibilities and use the `require` syntax put references where they're
-needed.
+Github Front End: https://github.com/jlee187/networking_app_front_end
+Github API: https://github.com/jlee187/networking_app
 
-Developers should set `config.apiOrigins.production` (and
-`config.apiOrigins.development` if it differs from the default).  With
-`apiOrigins` set, developers may rely on `config.apiOrigin` as the base for API
-URLs.
+Deployed Front End: https://jlee187.github.io/networking_app_front_end/
+Deployed Back End: https://networkingapp.herokuapp.com/
 
-Developers should store styles in [`assets/styles`](assets/styles) and load them
-from [`assets/styles/index.scss`](assets/styles/index.scss).
+Technologies Used: Javascript, Ruby, Ruby on Rails, JQuery, and HTML
 
-Developers should use [getFormFields](forms.md) to retrieve form data to send to
-an API.
-
-To deploy a browser-template based SPA, run `grunt deploy`.
-
-## Tasks
-
-Developers should run these often!
-
--   `grunt nag` or just `grunt`: runs code quality analysis tools on your code
-    and complains
--   `grunt make-standard`: reformats all your code in the JavaScript Standard Style
--   `grunt <server|serve|s>`: generates bundles, watches, and livereloads
--   `grunt test`: runs any automated tests, depends on `grunt build`
--   `grunt build`: place bundled styles and scripts where `index.html` can find
-    them
-
-## [License](LICENSE)
-
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+Unsolved Problems to Finish/ Add-ons: Would like to add a new many-to-many table
+that captures people's companies that they work at with another screen that shows
+any person that works at a certain company.

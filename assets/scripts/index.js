@@ -11,7 +11,7 @@ $(() => {
   $('#create-note').hide()
   $('#update-note').hide()
   $('#delete-note').hide()
-  $('#change-password-button').hide()
+  $('#change-password').hide()
   $('#sign-out').hide()
 })
 
