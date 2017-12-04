@@ -77,9 +77,9 @@ const signOutFailure = function () {
 
 const createNoteSuccess = function () {
   // console.log('Signed out successfully')
-  $('#message').text('Note Sent')
   // $('.headers').hide()
   document.getElementById('getPeopleButton').click()
+  $('#message').text('Note Sent')
 }
 
 const createNoteFailure = function () {
@@ -89,9 +89,9 @@ const createNoteFailure = function () {
 
 const updateNoteSuccess = function () {
   // console.log('Signed out successfully')
-  $('#message').text('Note Updated')
   // $('.headers').hide()
   document.getElementById('getPeopleButton').click()
+  $('#message').text('Note Updated')
 }
 
 const updateNoteFailure = function () {
@@ -101,9 +101,9 @@ const updateNoteFailure = function () {
 
 const deleteNoteSuccess = function () {
   // console.log('Signed out successfully')
-  $('#message').text('Note Deleted')
   // $('.headers').hide()
   document.getElementById('getPeopleButton').click()
+  $('#message').text('Note Deleted')
 }
 
 const deleteNoteFailure = function () {
