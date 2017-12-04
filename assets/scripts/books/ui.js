@@ -78,8 +78,8 @@ const signOutFailure = function () {
 const createNoteSuccess = function () {
   // console.log('Signed out successfully')
   // $('.headers').hide()
-  document.getElementById('getPeopleButton').click()
   $('#message').text('Note Sent')
+  document.getElementById('getPeopleButton').click()
 }
 
 const createNoteFailure = function () {
@@ -112,19 +112,20 @@ const deleteNoteFailure = function () {
 }
 
 const getPeopleSuccess = (data) => {
-  console.log(data)
+  // console.log(data)
   const showPeopleHtml = showPeopleTemplate({ people: data.people })
   $('.content').append(showPeopleHtml)
-  $('#message').html('Retrieved all notes')
+  // $('#message').html('Retrieved all notes')
 }
 
 const clearPeople = () => {
   $('.content').empty()
-  $('#message').html('All notes hidden')
+  // $('#message').html('All notes hidden')
 }
 
-const failure = (error) => {
-  console.error(error)
+const failure = () => {
+  $('#message').text('Failed to clear list')
+  // console.error(error)
 }
 
 module.exports = {

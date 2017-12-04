@@ -7,7 +7,7 @@ const ui = require('./books/ui')
 
 const onSignUp = function (event) {
   const data = getFormFields(this)
-  console.log(data)
+  // console.log(data)
   event.preventDefault()
   api.signUp(data)
     .then(ui.signUpSuccess)
@@ -18,7 +18,7 @@ const onSignUp = function (event) {
 
 const onSignIn = function (event) {
   const data = getFormFields(this)
-  console.log(data)
+  // console.log(data)
   event.preventDefault()
   api.signIn(data)
     .then(ui.signInSuccess)
@@ -29,7 +29,7 @@ const onSignIn = function (event) {
 
 const onChangePassword = function (event) {
   const data = getFormFields(this)
-  console.log(data)
+  // console.log(data)
   event.preventDefault()
   api.changePassword(data)
     .then(ui.changePasswordSuccess)
@@ -66,7 +66,7 @@ const onCreateNote = function (event) {
 
 const onUpdateNote = function (event) {
   const data = getFormFields(this)
-  console.log(data)
+  // console.log(data)
   event.preventDefault()
   api.updateNote(data)
     .then(ui.updateNoteSuccess)
@@ -77,7 +77,7 @@ const onUpdateNote = function (event) {
 
 const onDeleteNote = function (event) {
   const data = getFormFields(this)
-  console.log(data)
+  // console.log(data)
   event.preventDefault()
   api.deleteNote(data)
     .then(ui.deleteNoteSuccess)
