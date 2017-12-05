@@ -13,6 +13,10 @@ const signUpSuccess = function (data) {
   // console.log(data)
   $('#message').text('Signed up succesfully')
   $('#sign-up-button').hide()
+  $('#editNote').hide()
+  $('#deleteNote').hide()
+  $('#getPeopleButton').hide()
+  $('#clearPeopleButton').hide()
 }
 
 const signUpFailure = function () {
@@ -80,6 +84,10 @@ const createNoteSuccess = function () {
   // $('.headers').hide()
   $('#message').text('Note Sent')
   document.getElementById('getPeopleButton').click()
+  $('#editNote').show()
+  $('#deleteNote').show()
+  $('#getPeopleButton').show()
+  $('#clearPeopleButton').show()
 }
 
 const createNoteFailure = function () {

@@ -113,6 +113,7 @@ const showEdit = () => {
   $('#update-note').show()
   $('#create-note').hide()
   $('#delete-note').hide()
+  document.getElementById('getPeopleButton').click()
 }
 
 const showDelete = () => {
@@ -121,6 +122,7 @@ const showDelete = () => {
   $('#delete-note').show()
   $('#create-note').hide()
   $('#update-note').hide()
+  document.getElementById('getPeopleButton').click()
 }
 
 const addHandlers = function () {
