@@ -19,6 +19,7 @@ const onSignUp = function (event) {
 const onSignIn = function (event) {
   const data = getFormFields(this)
   // console.log(data)
+  // ui.initialLogIn(data)
   event.preventDefault()
   api.signIn(data)
     .then(ui.signInSuccess)
@@ -125,6 +126,13 @@ const showDelete = () => {
   document.getElementById('getPeopleButton').click()
 }
 
+const initialLogIn = (event) => {
+  event.preventDefault()
+  api.getPeople()
+    .then(ui.getPeopleSuccess)
+    .catch(ui.failure)
+}
+
 const addHandlers = function () {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
@@ -138,6 +146,7 @@ const addHandlers = function () {
   $('#composeNote').on('click', showCreate)
   $('#editNote').on('click', showEdit)
   $('#deleteNote').on('click', showDelete)
+  $('#initialLogIn').on('click', initialLogIn)
 }
 
 module.exports = {

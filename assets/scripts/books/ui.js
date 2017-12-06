@@ -6,17 +6,21 @@
 // $('#sign-out').hide()
 
 const store = require('../store')
-// const events = require('../events')
+
+// const api = require('./api')
+
+const api = require('./api')
+
 const showPeopleTemplate = require('../templates/helpers/person-listing.handlebars')
 
 const signUpSuccess = function (data) {
   // console.log(data)
   $('#message').text('Signed up succesfully')
   $('#sign-up-button').hide()
-  $('#editNote').hide()
-  $('#deleteNote').hide()
-  $('#getPeopleButton').hide()
-  $('#clearPeopleButton').hide()
+  // $('#editNote').hide()
+  // $('#deleteNote').hide()
+  // $('#getPeopleButton').hide()
+  // $('#clearPeopleButton').hide()
 }
 
 const signUpFailure = function () {
@@ -38,8 +42,37 @@ const signInSuccess = function (data) {
   // $('#sign-in').hide()
   $('#change-password').show()
   $('#sign-out').show()
-  // $('#sign-up').hide()
-  // $('.headers').css('display', 'block')
+  $('.headers').css('display', 'block')
+
+  $('#initialLogIn').click()
+
+  // console.log(data.people.length)
+
+  // const test = api.getPeople()
+  // console.log(test)
+
+  // if (test.length === 0) {
+  //   $('#editNote').hide()
+  //   $('#deleteNote').hide()
+  //   $('#getPeopleButton').hide()
+  //   $('#clearPeopleButton').hide()
+  // }
+
+  // $('#getPeopleButton').click()
+  // console.log(data)
+  // const showPeopleHtml = showPeopleTemplate({ people: data.people })
+  // $('.content').append(showPeopleHtml)
+  // console.log(showPeopleHtml)
+  // if (showPeopleHtml.length === 0) {
+  //   console.log(showPeopleHtml)
+  //   $('#editNote').hide()
+  //   $('#deleteNote').hide()
+  //   $('#getPeopleButton').hide()
+  //   $('#clearPeopleButton').hide()
+  // } else {
+  //   console.log('test')
+  // }
+  // $('.content').hide()
 }
 
 const signInFailure = function () {
@@ -88,6 +121,7 @@ const createNoteSuccess = function () {
   $('#deleteNote').show()
   $('#getPeopleButton').show()
   $('#clearPeopleButton').show()
+  $('.content').show()
 }
 
 const createNoteFailure = function () {
@@ -122,8 +156,27 @@ const deleteNoteFailure = function () {
 const getPeopleSuccess = (data) => {
   // console.log(data)
   const showPeopleHtml = showPeopleTemplate({ people: data.people })
+  // console.log(showPeopleHtml.length)
   $('.content').append(showPeopleHtml)
   // $('#message').html('Retrieved all notes')
+  // console.log(data.people.length)
+  if (data.people.length === 0) {
+    $('#editNote').hide()
+    $('#deleteNote').hide()
+    $('#getPeopleButton').hide()
+    $('#clearPeopleButton').hide()
+  }
+}
+
+const initialLogIn = (data) => {
+  api.getPeople()
+  // console.log(data.people.length)
+  // if (showPeopleHtml.length === 0) {
+  //   $('#editNote').hide()
+  //   $('#deleteNote').hide()
+  //   $('#getPeopleButton').hide()
+  //   $('#clearPeopleButton').hide()
+  // }
 }
 
 const clearPeople = () => {
@@ -152,6 +205,7 @@ module.exports = {
   deleteNoteSuccess,
   deleteNoteFailure,
   getPeopleSuccess,
+  initialLogIn,
   clearPeople,
   failure
   // showNoteSuccess,
