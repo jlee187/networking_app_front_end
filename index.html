@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body class="container-fluid">
+
+    <div class="user-auth">
+      <!-- sign-up -->
+      <div class="btn-group" id="sign-up-button">
+        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sign Up
+        </button>
+        <div class="dropdown-menu">
+          <form class="px-4 py-3" id="sign-up">
+            <div class="form-group">
+              <label for="sign-up-email">Email address</label>
+              <input type="text" class="form-control" id="sign-up-email" name="credentials[email]" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="sign-up-password">Password</label>
+              <input type="password" class="form-control" id="sign-up-password" name="credentials[password]" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <label for="sign-up-password-confirmation">Password Confirmation</label>
+              <input type="password" class="form-control" id="sign-up-password-confirmation" name="credentials[password_confirmation]" placeholder="Password_Confirmation">
+            </div>
+            <input type="submit" name="submit" value="Sign up">
+          </form>
+          <br>
+        </div>
+      </div>
+
+<!-- Sign-In -->
+<div class="btn-group" id="sign-in-button">
+        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sign In
+        </button>
+        <div class="dropdown-menu">
+          <form class="px-4 py-3" id="sign-in">
+            <div class="form-group">
+              <label for="sign-in-email">Email address</label>
+              <input type="text" class="form-control" id="sign-in-email" name="credentials[email]" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="sign-in-password">Password</label>
+              <input type="password" class="form control" id="sign-in-password" name="credentials[password]" placeholder="Password">
+            </div>
+            <input type="submit" name="submit" value="Sign In">
+          </form>
+          <br>
+        </div>
+</div>
+<!-- Change Password -->
+  <!-- <div class="btn-group" id="change-password-button">
+        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Change Password
+        </button>
+        <div class="dropdown-menu">
+          <form class="px-4 py-3" id="change-password">
+            <div class="form-group">
+              <label for="oldpw">Old Password</label>
+              <input type="text" class="form-control" id="oldpw" name="passwords[old]" placeholder="Old Password">
+            </div>
+            <div class="form-group">
+              <label for="newpw">New Password</label>
+              <input type="text" class="form-control" id="newpw" name="passwords[new]" placeholder="New Password">
+            </div>
+            <input type="submit" name="submit" value="Change Password">
+          </form>
+          <br>
+        </div>
+      </div> -->
+
+  <form class="header" id="change-password">
+    <fieldset>
+      <legend>Change Password!</legend>
+      <input type="text" name="passwords[old]" placeholder="Old Password">
+      <input type="text" name="passwords[new]" placeholder="New Password">
+      <input type="submit" name="submit" value="Change Password!">
+    </fieldset>
+  </form>
+
+  <!-- Sign Out -->
+    <!-- <div class="btn-group">
+          <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sign Out
+          </button>
+          <div class="dropdown-menu">
+            <form class="px-4 py-3" id="sign-out">
+              <input type="click" name="submit" value="Sign Out">
+            </form>
+            <br>
+          </div>
+        </div> -->
+
+    <form id="sign-out">
+      <fieldset>
+        <!-- <legend>Sign Out!</legend> -->
+        <input type="submit" name="submit" value="Sign Out!">
+      </fieldset>
+    </form>
+
+  </div>
+
+
+
+<!-- Trying to add menu bar -->
+
+
+    <!-- <nav class="user-actions">
+      <form class="header" id="sign-up">
+        <fieldset>
+          <legend>Sign up!</legend>
+          <input type="text" id="sign-up-email" name="credentials[email]" placeholder="Email">
+          <input type="text" id="sign-up-password" name="credentials[password]" placeholder="Password">
+          <input type="text" id="sign-up-password-confirmation" name="credentials[password_confirmation]" placeholder="Password_Confirmation">
+          <input type="submit" name="submit" value="Sign up!">
+        </fieldset>
+      </form>
+
+      <form class="header" id="sign-in">
+        <fieldset>
+          <legend>Sign in!</legend>
+          <input type="text" id="sign-in-email" name="credentials[email]" placeholder="Email">
+          <input type="text" id="sign-in-password" name="credentials[password]" placeholder="Password">
+          <input type="submit" name="submit" value="Sign in!">
+        </fieldset>
+      </form>
+
+      <form class="header" id="change-password">
+        <fieldset>
+          <legend>Change Password!</legend>
+          <input type="text" name="passwords[old]" placeholder="Old Password">
+          <input type="text" name="passwords[new]" placeholder="New Password">
+          <input type="submit" name="submit" value="Change Password!">
+        </fieldset>
+      </form>
+
+      <form id="sign-out">
+        <fieldset>
+          <legend>Sign Out!</legend>
+          <input type="submit" name="submit" value="Sign Out!">
+        </fieldset>
+      </form>
+    </nav> -->
+
+
+    <header><img src='https://i.imgur.com/0xbwNwr.jpg' alt="NA"></header>
+
+    <h3 id='message'></h3>
+
+    <div class="main">
+
+      <div id='selector'>
+        <button id="composeNote" class="btn btn-default">Compose Note</button>
+        <button id="editNote" class="btn btn-default">Edit Note</button>
+        <button id="deleteNote" class="btn btn-default">Delete Note</button>
+      </div>
+
+        <button id="initialLogIn" class="btn btn-default">Initial Log In</button>
+        <button id="getPeopleButton" class="btn btn-default">Get all Connections!</button>
+        <button id="clearPeopleButton" class="btn btn-default">Clear List!</button>
+        <div id="content" class="content">
+        </div>
+      </div>
+
+      <div id="type-id"></div>
+
+      <div id="notes">
+      <form id="create-note">
+        <fieldset>
+          <!-- <legend>Info</legend> -->
+          <input type="text" class="form-field" name="person[name]" placeholder="Name">
+          <br>
+          <input type="text" class="form-field" name="person[connections]" placeholder="Connections">
+          <br>
+          <input type="text" class="form-field" name="person[partner]" placeholder="Partner">
+          <br>
+          <input type="text" class="form-field" name="person[children]" placeholder="Children">
+          <br><br>
+          <div class="add-name">Notes</div>
+          <input type="text" class="form-field-note-box" name="person[notes]">
+          <br>
+          <div><img src='https://i.imgur.com/GaFHTNe.jpg' alt="NA"></div>
+          <input type="submit" class="form-field" name="submit" value="Submit">
+          <br>
+        </fieldset>
+      </form>
+
+      <form id="update-note">
+        <fieldset>
+          <!-- <legend>Update</legend> -->
+          <input type="text" class="form-field" name="person[name]" placeholder="Name">
+          <br>
+          <input type="text" class="form-field" name="person[connections]" placeholder="Connections">
+          <br>
+          <input type="text" class="form-field" name="person[partner]" placeholder="Partner">
+          <br>
+          <input type="text" class="form-field" name="person[children]" placeholder="Children">
+          <br><br>
+          <div class="add-name">Notes</div>
+          <input type="text" class="form-field-note-box" name="person[notes]">
+          <br>
+          <input type="text" class="form-field" name="person[id]" placeholder="ID">
+          <br>
+          <div><img src='https://i.imgur.com/GaFHTNe.jpg' alt="NA"></div>
+          <input type="submit" name="submit" value="Submit">
+        </fieldset>
+      </form>
+
+      <form id="delete-note">
+        <fieldset>
+          <!-- <legend>Delete Note</legend> -->
+          <input type="text" name="person[id]" placeholder="ID">
+          <input type="submit" name="submit" value="Submit">
+        </fieldset>
+      </form>
+    </div>
+
+    </body>
+</html>
